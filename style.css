@@ -649,21 +649,20 @@ footer {
 .menu-checkbox { display: none !important; }
 
 @media (max-width: 900px) {
-  .nav { position: relative !important; }
-
   .burger {
     display: flex !important;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     gap: 5px;
     cursor: pointer;
     z-index: 1001;
   }
   .burger span {
     display: block !important;
-    width: 26px;
-    height: 3px;
-    background: #fff;
-    border-radius: 2px;
+    width: 22px;
+    height: 2px;
+    background: var(--cyan);
   }
 
   .menu {
@@ -672,15 +671,20 @@ footer {
     top: 100% !important;
     left: 0 !important;
     right: 0 !important;
+    width: 100%;
     flex-direction: column !important;
+    align-items: center;
     gap: 0 !important;
     padding: 10px 0 !important;
-    background: rgba(8, 10, 30, 0.97) !important;
+    background: rgba(7, 10, 31, 0.97) !important;
     z-index: 1000;
   }
-  .menu li { padding: 12px 20px; }
 
-  .menu-checkbox:checked ~ .menu { display: flex !important; }
+  .menu-checkbox:checked ~ .menu {
+    display: flex !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
 }
 
 @media (min-width: 901px) {
