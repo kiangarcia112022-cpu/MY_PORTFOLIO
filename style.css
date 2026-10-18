@@ -182,7 +182,7 @@ section {
   align-items: center;
   padding-top: 120px;
   overflow: hidden;
-  /* dark layer on top of the optional hero image */
+ 
   background-image: linear-gradient(rgba(7,10,31,0.5), rgba(7,10,31,0.85)), var(--hero-image, none);
   background-size: cover;
   background-position: center;
@@ -524,7 +524,7 @@ footer {
   50% { transform: scale(1.2); opacity: 0.6; }
 }
 
-@keyframes moveGradient {  /* slide the background colors */
+@keyframes moveGradient {  
   50% { background-position: 100% 50%; }
 }
 
@@ -548,7 +548,7 @@ footer {
     transition: 0.4s;
   }
 
-  /* JavaScript adds "open" when you tap the hamburger */
+  
   .menu.open {
     max-height: 360px; 
     padding: 12px 0;
@@ -611,7 +611,7 @@ footer {
 .theme-btn::before { content: "☀️"; }
 .menu { margin-left: auto; }         
 
-/* ----- LIGHT MODE: these only apply when the box is checked ----- */
+
 :root:has(#theme-toggle:checked) {
   --dark: #0a0f33;
   --white: #1c2541;                  
@@ -637,13 +637,11 @@ footer {
 :root:has(#theme-toggle:checked) textarea { background: white; }
 :root:has(#theme-toggle:checked) footer   { background: rgba(255, 255, 255, 0.8); }
 
-/* Phone and tablet */
+
 @media (max-width: 800px) {
   .theme-btn { margin-left: auto; }
   .burger { order: 3; margin-left: 10px; }
   :root:has(#theme-toggle:checked) .menu { background: rgba(255, 255, 255, 0.97); }
 }
 
-/* Without JavaScript nothing adds the class "visible",
-   so this keeps your sections showing. */
 .reveal { opacity: 1; transform: none; }
