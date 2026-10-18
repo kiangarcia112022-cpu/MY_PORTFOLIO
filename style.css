@@ -17,7 +17,7 @@
 }
 
 html {
-  scroll-behavior: smooth;  /* menu links scroll smoothly */
+  scroll-behavior: smooth;  
 }
 
 
@@ -645,3 +645,29 @@ footer {
 }
 
 .reveal { opacity: 1; transform: none; }
+
+.menu-checkbox { display: none; }
+
+@media (max-width: 768px) {
+  .nav { position: relative; }
+  .burger { display: flex; cursor: pointer; }
+
+  .menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 0;
+    background: rgba(8, 10, 30, 0.95);
+  }
+  .menu li { padding: 12px 20px; }
+
+  .menu-checkbox:checked ~ .menu { display: flex; }
+}
+
+@media (min-width: 769px) {
+  .burger { display: none; }
+}
